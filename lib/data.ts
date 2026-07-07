@@ -49,7 +49,7 @@ export const memories: Memory[] = [
     title: "Viață de student",
     date: "Februarie 2024",
     story:
-      "Pauze între cursuri, semne de pace și prostii. Facultatea ar fi fost pe jumătate fără tine în bancă lângă mine.",
+      "Pauze între cursuri, semne de pace și prostii. Facultatea ar fi fost pe jumătate fără tine în bancă lângă mine, bro.",
     image: "/memories/facultate.jpg",
     x: 43, y: 15, size: 15,
   },
@@ -76,7 +76,7 @@ export const memories: Memory[] = [
     title: "Printre cărți",
     date: "2025",
     story:
-      "Chiar și când era vorba serios de învățat, tot găseam un motiv de glumă. Așa treceau cele mai grele zile mai ușor.",
+      "Cu o carte de română în mână și fața de „iar ne pică Ungureanu”. Dar tot găseam un motiv de râs — așa treceau cele mai grele zile mai ușor.",
     image: "/memories/carte.jpg",
     x: 60, y: 24, size: 14,
   },
@@ -175,7 +175,7 @@ export const memories: Memory[] = [
     title: "Încă aici, încă frați",
     date: "Azi",
     story:
-      "Trec anii, noi rămânem la fel. Steaua asta strălucește cel mai tare fiindcă povestea încă se scrie.",
+      "Trec anii, tu tot miticul rămâi — dar frate-mi ești pe viață. Steaua asta strălucește cel mai tare fiindcă povestea încă se scrie.",
     image: "/memories/acum.jpg",
     x: 15, y: 62, size: 22,
   },
@@ -197,35 +197,35 @@ export const letters: Letter[] = [
     id: "ziua",
     title: "Deschide de ziua ta",
     content:
-      "La mulți ani, Petru! 🎉\n\nSper că zâmbești în timp ce citești asta. Nu ți-am luat un lucru pe care să-l pui pe raft și să-l uiți — ți-am făcut un cer, ca să ai unde te întoarce oricând vrei să-ți amintești de noi.\n\nSă ai un an cât toate stelele de aici la un loc. Te iubesc, frate.",
+      "La mulți ani, miticule! 🎉\n\nSper că zâmbești în timp ce citești asta. Nu ți-am luat un lucru pe care să-l pui pe raft și să-l uiți — ți-am făcut un cer întreg, ca să ai unde te întoarce oricând vrei să-ți amintești de noi.\n\nSă ai un an cât toate stelele de aici la un loc. Și lasă țigările, bro. Te iubesc, frate.",
     unlockDate: "",
   },
   {
     id: "fericit",
     title: "Deschide când ești fericit",
     content:
-      "Bravo. Ține bine de clipa asta.\n\nȘi, dacă tot ești fericit — sună-mă, hai să facem din ziua asta încă o stea pe cer.",
+      "Bravo, răule. Ține bine de clipa asta.\n\nȘi, dacă tot ești fericit — sună-mă, hai să facem din ziua asta încă o stea pe cer.",
     unlockDate: "",
   },
   {
     id: "greu",
     title: "Deschide când ți-e greu",
     content:
-      "Ai avut zile mai grele decât asta și tot aici ești. O să treacă și asta, exact cum au trecut toate celelalte.\n\nIar dacă nu trece singură, știi unde mă găsești. Mereu.",
+      "Ascultă-mă, miticule: ai avut zile mai grele decât asta și tot aici ești. O să treacă și asta, exact cum au trecut toate celelalte.\n\nEști mai deștept și mai tare decât crezi. Iar dacă nu treci singur peste ea, știi unde mă găsești. Mereu.",
     unlockDate: "",
   },
   {
     id: "dor",
     title: "Deschide când ți-e dor de mine",
     content:
-      "Atunci suntem chit, fiindcă și mie mi-e dor de tine.\n\nDerulează înapoi prin stele și alege una. Eu deja mă gândesc la ea în timp ce citești rândurile astea.",
+      "Atunci suntem chit, frate, fiindcă și mie mi-e dor de tine.\n\nDerulează înapoi prin stele și alege una. Eu deja mă gândesc la ea în timp ce citești rândurile astea.",
     unlockDate: "",
   },
   {
     id: "2030",
     title: "Deschide în 2030",
     content:
-      "Dacă citești asta, înseamnă că am ajuns mai departe decât ne așteptam amândoi. Sunt curios cine suntem acum.\n\nSper că suntem tot noi. Scrisoarea asta rămâne sigilată până în 2030.",
+      "Dacă citești asta, înseamnă că am ajuns mai departe decât ne așteptam amândoi. Sunt curios cine suntem acum.\n\nSper că suntem tot noi, că ai lăsat țigările până la urmă și că tot n-o iertăm pe Ungureanu. Scrisoarea asta rămâne sigilată până în 2030.",
     unlockDate: "2030-01-01T00:00:00",
   },
 ];
@@ -234,10 +234,11 @@ export const letters: Letter[] = [
  *  CITATE — se rotesc singure în secțiunea de sub constelație.
  * -------------------------------------------------------------------------- */
 export const quotes: string[] = [
-  "Un prieten adevărat te vede la cel mai prost moment al tău și tot rămâne.",
-  "Nu contează unde mergem, cât timp mergem împreună.",
+  "Un prieten adevărat te vede la cel mai prost moment și tot rămâne. (Da, mă refer la tine, răule.)",
+  "Nu contează unde mergem, cât timp mergem împreună — și cât timp ții pasul, miticule.",
   "Cele mai bune amintiri au început cu „hai să facem o prostie”.",
-  "Frații nu se aleg. Pe tine te-aș fi ales oricum.",
+  "Frații nu se aleg. Pe tine te-aș fi ales oricum — chiar și cu țigările tale.",
+  "Ești deșteptul grupei, bro. Păcat că nu se vede mereu.",
 ];
 
 /* ----------------------------------------------------------------------------
@@ -245,8 +246,9 @@ export const quotes: string[] = [
  * -------------------------------------------------------------------------- */
 export const stats: { label: string; value: number }[] = [
   { label: "Râsete garantate", value: 99 },
-  { label: "Idei geniale la 3 noaptea", value: 92 },
-  { label: "Planuri duse până la capăt", value: 41 },
-  { label: "„Mai stăm 5 minute”", value: 100 },
+  { label: "Deșteptăciune (o ai, dar o ascunzi bine)", value: 88 },
+  { label: "Înălțime", value: 21 },
+  { label: "Țigări lăsate", value: 4 },
+  { label: "Simpatie pentru Ungureanu", value: 0 },
   { label: "Frați pe viață", value: 100 },
 ];

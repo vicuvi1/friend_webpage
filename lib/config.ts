@@ -15,16 +15,18 @@ export const config = {
   tagline: "Fiecare stea e o clipă pe care am trăit-o împreună.",
 
   /** Butonul care deschide cartea amintirilor. */
-  openButton: "Deschide cartea amintirilor",
+  openButton: "Hai, deschide, miticule 👀",
 
   /** ---- O ultimă surpriză (finalul) ---- */
   surprise: {
     /** Mesajul de suflet dezvăluit chiar la final. */
     message:
-      "Pentru cel mai bun prieten al meu, Petru — 19 ani și tot n-ai învățat să răspunzi la mesaje, dar te iert. 😄 " +
-      "Ți-am făcut un cer în loc de-un cadou banal, fiindcă tu nu ești un prieten banal. " +
-      "Ai fost lângă mine la fiecare prostie, fiecare sesiune și fiecare zi mai gri — și n-aș da înapoi niciun an. " +
-      "La mulți ani, frate! Aici sunt toate stelele de până acum, și mai avem o grămadă de aprins împreună.",
+      "La mulți ani, miticule! 🎉 (Da, tot miticul rămâi, degeaba te ridici pe vârfuri.) " +
+      "Ești cel mai deștept prost pe care-l cunosc și cel mai bun prieten pe care puteam să-l am. " +
+      "Ți-am făcut un cer în loc de-un cadou banal — și singura condiție e să lași țigările, " +
+      "ca să mai aprindem împreună cât mai multe stele de-acum înainte. " +
+      "Orice ar urma, cerul ăsta rămâne al nostru. Te iubesc, frate. — Victor " +
+      "(P.S. pe Ungureanu tot n-o iertăm.)",
     /** Poza afișată în timpul finalului. */
     photo: "/memories/finale.jpg",
     /** Ținta numărătorii inverse — următoarea amintire (ziua lui, o excursie etc.). Dată ISO. */
