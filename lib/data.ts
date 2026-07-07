@@ -234,7 +234,7 @@ export const letters: Letter[] = [
     id: "2030",
     title: "Deschide în 2030",
     content:
-      "Salut, Petru! 👋\n\nSper că mai suntem prieteni — deși, stai, eu nu sper, eu știu. 😎 Acum suntem deja aproape de absolvire, iar dacă citești mesajul ăsta înseamnă că chiar nu ai uitat de mine.\n\nSper că ai lăsat fumatul și că e totul bine la tine — poate chiar lucrezi deja ca SOC Analyst. Sună-mă, răule, chiar dacă ești supărat pe mine — hai să discutăm. Cine știe ce ne așteaptă în viitor.\n\nȘi, bro, un singur lucru: never give up.",
+      "Salut, Petru! Sper că mai suntem prieteni... ahaha, eu nu sper, eu știu. Acuma deja suntem aproape de absolvire. Apropo, dacă citești acest mesaj, atunci chiar nu ai uitat de mine.\n\nSper să fi lăsat fumatul și să fie totul bine la tine — poate chiar deja lucrezi ca SOC Analyst. Sună-mă, răule, chiar dacă ești supărat pe mine, hai să discutăm. Cine știe ce ne așteaptă în viitor.\n\nBro, one thing: never give up.",
     unlockDate: "2030-01-01T00:00:00",
   },
 ];
