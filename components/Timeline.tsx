@@ -3,13 +3,12 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { memories } from "@/lib/data";
+import Editable from "./Editable";
 
 export default function Timeline({ onSelect }: { onSelect: (index: number) => void }) {
   return (
     <section id="cronologie" className="relative mx-auto w-full max-w-4xl px-4 py-20">
-      <h2 className="text-center font-display text-4xl font-medium gradient-text sm:text-5xl">
-        Firul poveștii
-      </h2>
+      <Editable as="h2" id="ui.timeline.title" value="Firul poveștii" className="block text-center font-display text-4xl font-medium gradient-text sm:text-5xl" />
       <p className="mt-3 text-center text-sm tracking-widest text-[var(--star)]/60">
         de la prima poză până azi
       </p>

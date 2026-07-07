@@ -21,3 +21,22 @@ drop policy if exists "insert messages" on public.messages;
 create policy "insert messages"
   on public.messages for insert
   with check (char_length(message) between 1 and 500);
+
+-- ---- Editările de text (modul secret). Ca modificările lui Victor să se vadă
+-- ---- pentru toți (și pentru Petru), se salvează aici. ----
+create table if not exists public.content (
+  key         text primary key,
+  value       text not null,
+  updated_at  timestamptz not null default now()
+);
+
+alter table public.content enable row level security;
+
+drop policy if exists "read content" on public.content;
+create policy "read content" on public.content for select using (true);
+
+drop policy if exists "write content" on public.content;
+create policy "write content" on public.content for insert with check (true);
+
+drop policy if exists "update content" on public.content;
+create policy "update content" on public.content for update using (true) with check (true);

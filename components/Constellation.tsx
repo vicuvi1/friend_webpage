@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { memories, type Memory } from "@/lib/data";
+import Editable from "./Editable";
 
 export default function Constellation({
   onSelect,
@@ -17,7 +18,7 @@ export default function Constellation({
         transition={{ duration: 1 }}
         className="text-center font-display text-4xl font-medium gradient-text sm:text-5xl"
       >
-        Constelația noastră
+        <Editable id="ui.constellation.title" value="Constelația noastră" />
       </motion.h2>
       <motion.p
         initial={{ opacity: 0 }}

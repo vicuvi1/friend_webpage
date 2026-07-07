@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { config } from "@/lib/config";
+import Editable from "./Editable";
 
 export default function Intro({ onOpen }: { onOpen: () => void }) {
   return (
@@ -25,7 +26,7 @@ export default function Intro({ onOpen }: { onOpen: () => void }) {
         transition={{ delay: 0.9, duration: 1.4 }}
         className="font-display text-6xl font-medium tracking-wide text-glow sm:text-7xl md:text-8xl"
       >
-        {config.friendName}
+        <Editable id="config.friendName" value={config.friendName} />
       </motion.h1>
 
       <motion.p
@@ -34,7 +35,7 @@ export default function Intro({ onOpen }: { onOpen: () => void }) {
         transition={{ delay: 2, duration: 1.6 }}
         className="mt-6 max-w-md font-display text-xl italic text-[var(--star)]/80 sm:text-2xl"
       >
-        {config.tagline}
+        <Editable id="config.tagline" value={config.tagline} />
       </motion.p>
 
       <motion.button

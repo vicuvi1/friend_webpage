@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import type { Memory } from "@/lib/data";
+import Editable from "./Editable";
 
 export default function MemoryModal({
   memories,
@@ -76,9 +77,9 @@ export default function MemoryModal({
 
               <Polaroid memory={memory} />
 
-              <p className="mt-5 font-hand text-xl text-[var(--gold)]">{memory.date}</p>
-              <h2 className="font-display text-3xl font-medium">{memory.title}</h2>
-              <p className="mt-3 leading-relaxed text-[var(--star)]/80">{memory.story}</p>
+              <Editable as="p" id={`memory.${memory.id}.date`} value={memory.date} className="mt-5 block font-hand text-xl text-[var(--gold)]" />
+              <Editable as="h2" id={`memory.${memory.id}.title`} value={memory.title} className="block font-display text-3xl font-medium" />
+              <Editable as="p" id={`memory.${memory.id}.story`} value={memory.story} multiline className="mt-3 block leading-relaxed text-[var(--star)]/80" />
 
               <p className="mt-5 text-center text-xs tracking-widest text-[var(--star)]/40">
                 {index + 1} / {memories.length} &nbsp;·&nbsp; folosește ← → sau săgețile

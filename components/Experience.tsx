@@ -15,6 +15,7 @@ import Letters from "./Letters";
 import Guestbook from "./Guestbook";
 import Finale from "./Finale";
 import FloatingNav from "./FloatingNav";
+import EditProvider from "./EditProvider";
 import { memories } from "@/lib/data";
 import { config } from "@/lib/config";
 
@@ -27,6 +28,7 @@ export default function Experience() {
   }, []);
 
   return (
+    <EditProvider>
     <main className="night-sky relative min-h-screen w-full overflow-x-hidden">
       <StarField />
 
@@ -74,6 +76,7 @@ export default function Experience() {
         onClose={() => setIndex(null)}
       />
     </main>
+    </EditProvider>
   );
 }
 

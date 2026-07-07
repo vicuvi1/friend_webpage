@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { letters, type Letter } from "@/lib/data";
+import Editable from "./Editable";
 
 function isLocked(letter: Letter) {
   if (!letter.unlockDate) return false;
@@ -23,9 +24,7 @@ export default function Letters() {
 
   return (
     <section id="scrisori" className="relative mx-auto w-full max-w-4xl px-4 py-20">
-      <h2 className="text-center font-display text-4xl font-medium gradient-text sm:text-5xl">
-        Scrisori pentru mai târziu
-      </h2>
+      <Editable as="h2" id="ui.letters.title" value="Scrisori pentru mai târziu" className="block text-center font-display text-4xl font-medium gradient-text sm:text-5xl" />
       <p className="mt-3 text-center text-sm tracking-widest text-[var(--star)]/60">
         deschide-le când e momentul potrivit
       </p>
@@ -89,10 +88,8 @@ export default function Letters() {
               >
                 ✕
               </button>
-              <p className="font-hand text-2xl text-[#7a5c1e]">{open.title}</p>
-              <p className="mt-6 whitespace-pre-line font-hand text-2xl leading-relaxed">
-                {open.content}
-              </p>
+              <Editable as="p" id={`letter.${open.id}.title`} value={open.title} className="block font-hand text-2xl text-[#7a5c1e]" />
+              <Editable as="p" id={`letter.${open.id}.content`} value={open.content} multiline className="mt-6 block whitespace-pre-line font-hand text-2xl leading-relaxed" />
             </motion.div>
           </motion.div>
         )}

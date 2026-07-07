@@ -1,5 +1,19 @@
 # ✍️ Cum editezi textul (ghid rapid)
 
+## 🔓 Modul secret (editezi direct pe site, fără cod)
+
+Pe site, **dublu-click pe orice text** → îți cere un **cod secret: `185`**.
+- Cod corect → intri în „mod editare”. Acum poți da dublu-click pe titluri, povești, scrisori, citate, glume, mesajul de final etc. și scrii direct peste. Apeși în afară / Enter ca să salvezi, Escape ca să anulezi.
+- Cod greșit → apare „Petru Petru, chiar nu-ți place ce am scris...?” 😄
+
+**Important:** ca modificările făcute așa să se vadă și pentru Petru (pe alt telefon), trebuie ca **Supabase să fie pornit** (vezi mai jos) și tabela `content` creată (rulează `supabase/schema.sql`). Fără Supabase, editările rămân doar pe browserul tău.
+
+Codul se schimbă în `components/EditProvider.tsx` (`const SECRET = "185"`).
+
+---
+
+## Sau editezi din fișiere (clasic)
+
 Tot ce ține de text și poze se schimbă în **2 fișiere**. Nu trebuie să știi să programezi — schimbi doar ce e între ghilimele `"..."`.
 
 > După ce salvezi, dă commit + push (sau lasă Vercel să redeployeze automat) și în ~1 minut apar modificările pe site.

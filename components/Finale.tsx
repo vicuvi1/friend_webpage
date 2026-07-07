@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { config } from "@/lib/config";
+import Editable from "./Editable";
 
 function useCountdown(target: string) {
   const [now, setNow] = useState<number | null>(null);
@@ -81,14 +82,19 @@ export default function Finale() {
               </motion.div>
             )}
 
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 0.92, y: 0 }}
               transition={{ delay: 2.5, duration: 2 }}
-              className="mt-8 max-w-xl font-display text-2xl italic leading-relaxed text-white/90"
             >
-              {config.surprise.message}
-            </motion.p>
+              <Editable
+                as="p"
+                id="config.surprise.message"
+                value={config.surprise.message}
+                multiline
+                className="mt-8 max-w-xl font-display text-2xl italic leading-relaxed text-white/90"
+              />
+            </motion.div>
 
             <motion.p
               initial={{ opacity: 0 }}

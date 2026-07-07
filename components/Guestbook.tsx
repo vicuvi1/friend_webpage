@@ -8,6 +8,7 @@ import {
   isSupabaseEnabled,
   type GuestMessage,
 } from "@/lib/supabase";
+import Editable from "./Editable";
 
 export default function Guestbook() {
   const [messages, setMessages] = useState<GuestMessage[]>([]);
@@ -37,9 +38,7 @@ export default function Guestbook() {
 
   return (
     <section id="oaspeti" className="relative mx-auto w-full max-w-3xl px-4 py-20">
-      <h2 className="text-center font-display text-4xl font-medium gradient-text sm:text-5xl">
-        Lasă un gând
-      </h2>
+      <Editable as="h2" id="ui.guestbook.title" value="Lasă un gând" className="block text-center font-display text-4xl font-medium gradient-text sm:text-5xl" />
       <p className="mt-3 text-center text-sm tracking-widest text-[var(--star)]/60">
         fiecare vizită e o altă amintire
       </p>

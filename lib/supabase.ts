@@ -49,3 +49,26 @@ export async function addMessage(
   if (error) return { ok: false, error: error.message };
   return { ok: true };
 }
+
+/* ---- Editări de text (modul secret). Tabela "content": key/value ---- */
+export async function fetchOverrides(): Promise<Record<string, string>> {
+  if (!client) return {};
+  const { data, error } = await client.from("content").select("key,value");
+  if (error) {
+    console.error("fetchOverrides", error.message);
+    return {};
+  }
+  const out: Record<string, string> = {};
+  (data ?? []).forEach((r: { key: string; value: string }) => (out[r.key] = r.value));
+  return out;
+}
+
+export async function saveOverride(key: string, value: string): Promise<boolean> {
+  if (!client) return false;
+  const { error } = await client.from("content").upsert({ key, value }, { onConflict: "key" });
+  if (error) {
+    console.error("saveOverride", error.message);
+    return false;
+  }
+  return true;
+}
