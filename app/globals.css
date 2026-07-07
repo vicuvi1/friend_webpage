@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  --bg-deep: #05060f;
+  --bg-mid: #0a0f2c;
+  --bg-glow: #1b2660;
+  --star: #eaf0ff;
+  --accent: #9db4ff;
+  --gold: #ffd98a;
+}
+
+@theme inline {
+  --font-display: var(--font-display);
+  --font-hand: var(--font-hand);
+  --font-body: var(--font-body);
+}
+
+html,
+body {
+  background: var(--bg-deep);
+  color: var(--star);
+  font-family: var(--font-body), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Night-sky gradient used behind the whole experience */
+.night-sky {
+  background:
+    radial-gradient(1200px 700px at 70% -10%, var(--bg-glow) 0%, transparent 60%),
+    radial-gradient(900px 600px at 10% 110%, #241a4a 0%, transparent 55%),
+    linear-gradient(180deg, var(--bg-mid) 0%, var(--bg-deep) 70%);
+}
+
+/* Glass panel */
+.glass {
+  background: rgba(18, 24, 56, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(157, 180, 255, 0.18);
+}
+
+/* Twinkle for background stars */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 1; }
+}
+
+/* Soft float for memory stars */
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.memory-star {
+  animation: floaty 6s ease-in-out infinite;
+}
+
+/* Glow pulse for interactive stars */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 12px 2px rgba(255, 217, 138, 0.55), 0 0 30px 6px rgba(157, 180, 255, 0.35); }
+  50% { box-shadow: 0 0 22px 6px rgba(255, 217, 138, 0.9), 0 0 55px 14px rgba(157, 180, 255, 0.55); }
+}
+
+.text-glow {
+  text-shadow: 0 0 24px rgba(157, 180, 255, 0.55);
+}
+
+/* thin scrollbar for guestbook */
+.scroll-thin::-webkit-scrollbar { width: 6px; }
+.scroll-thin::-webkit-scrollbar-thumb { background: rgba(157,180,255,0.35); border-radius: 999px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .memory-star, [class*="animate"] { animation: none !important; }
+}
