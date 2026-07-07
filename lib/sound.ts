@@ -5,7 +5,6 @@ let ctx: AudioContext | null = null;
 let master: GainNode | null = null;
 let padGain: GainNode | null = null;
 let started = false;
-let twinkleTimer: ReturnType<typeof setInterval> | null = null;
 let muted = false;
 
 const MASTER = 0.5;
@@ -100,8 +99,8 @@ export function startAmbient() {
   lfo.connect(lfoGain).connect(padGain.gain);
   lfo.start();
 
-  // steluțe ocazionale
-  twinkleTimer = setInterval(() => {
+  // steluțe ocazionale (rulează cât timp e deschis site-ul)
+  setInterval(() => {
     if (!muted && ctx && ctx.state === "running") {
       bell(NOTES[Math.floor(Math.random() * NOTES.length)], ctx.currentTime, 2.2, 0.08);
     }

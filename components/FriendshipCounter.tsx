@@ -7,6 +7,8 @@ import { config } from "@/lib/config";
 function useDays(from: string) {
   const [now, setNow] = useState<number | null>(null);
   useEffect(() => {
+    // intenționat: calculăm timpul doar pe client (altfel diferă server/client)
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setNow(Date.now());
     const id = setInterval(() => setNow(Date.now()), 1000);
     return () => clearInterval(id);

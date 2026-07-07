@@ -37,11 +37,14 @@ export default function EditProvider({ children }: { children: React.ReactNode }
 
   // încarcă editările (localStorage imediat, apoi Supabase)
   useEffect(() => {
+    // intenționat: citim localStorage doar după montare (pe client)
+    /* eslint-disable react-hooks/set-state-in-effect */
     try {
       const ls = localStorage.getItem(LS_OVERRIDES);
       if (ls) setOverrides(JSON.parse(ls));
       if (localStorage.getItem(LS_UNLOCK) === "1") setUnlocked(true);
     } catch {}
+    /* eslint-enable react-hooks/set-state-in-effect */
     if (isSupabaseEnabled) {
       fetchOverrides().then((remote) => {
         if (Object.keys(remote).length) {

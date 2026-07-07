@@ -8,6 +8,8 @@ import Editable from "./Editable";
 function useCountdown(target: string) {
   const [now, setNow] = useState<number | null>(null);
   useEffect(() => {
+    // intenționat: doar pe client, ca să evităm diferența server/client
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setNow(Date.now());
     const id = setInterval(() => setNow(Date.now()), 1000);
     return () => clearInterval(id);
@@ -61,7 +63,6 @@ export default function Finale() {
             </button>
 
             {!photoBroken ? (
-              // eslint-disable-next-line @next/next/no-img-element
               <motion.img
                 src={config.surprise.photo}
                 alt=""

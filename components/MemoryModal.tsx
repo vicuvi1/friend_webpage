@@ -113,8 +113,9 @@ function NavArrow({
 }
 
 function Polaroid({ memory }: { memory: Memory }) {
+  // `broken` se resetează singur: modalul remontează Polaroid la fiecare
+  // amintire (parintele are key={memory.id}).
   const [broken, setBroken] = useState(false);
-  useEffect(() => setBroken(false), [memory.image]);
   return (
     <motion.div
       initial={{ rotate: -2 }}
