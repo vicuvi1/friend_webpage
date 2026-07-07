@@ -6,10 +6,10 @@
 
 export const config = {
   /** Your friend's name — shown on the intro screen. */
-  friendName: "Victor",
+  friendName: "Petru",
 
   /** Your name — shown in the closing message. */
-  yourName: "Your Friend",
+  yourName: "Victor",
 
   /** The line that fades in on the intro screen. */
   tagline: "Every star is a moment we shared.",
