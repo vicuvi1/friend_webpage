@@ -32,6 +32,14 @@ Tot ce ține de text și poze se schimbă în **2 fișiere**. Nu trebuie să șt
 | Poza de la final | `surprise.photo` |
 | Textul de deasupra numărătorii | `surprise.countdownLabel` |
 | Data spre care numără (ziua lui etc.) | `surprise.countdownDate` |
+| Datele de contact (telefon, Instagram, email) | `contact.items` |
+| Textul de la contact | `contact.intro` |
+
+Contact — adaugă o intrare nouă (ex. email) în `contact.items`:
+```ts
+{ icon: "✉️", label: "Email", value: "adresa@ta.com", href: "mailto:adresa@ta.com" },
+```
+`href` poate fi `tel:+373...`, `mailto:...` sau un link `https://...`.
 
 Exemplu — schimbi mesajul de final:
 ```ts

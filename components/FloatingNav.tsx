@@ -10,6 +10,7 @@ const LINKS = [
   { id: "glume", label: "Glume" },
   { id: "scrisori", label: "Scrisori" },
   { id: "oaspeti", label: "Oaspeți" },
+  { id: "contact", label: "Contact" },
 ];
 
 export default function FloatingNav({ onRandom }: { onRandom: () => void }) {

@@ -36,4 +36,15 @@ export const config = {
     countdownLabel: "Ne vedem de ziua ta, Petru — peste",
     countdownDate: "2026-07-12T00:00:00",
   },
+
+  /** ---- Contact ---- adaugă/șterge intrări cum vrei (email, telefon 2 etc.) */
+  contact: {
+    intro: "Dacă ai nevoie de ceva — orice, oricând — sună-mă. Sunt la un apel distanță.",
+    items: [
+      { icon: "📞", label: "Sună-mă", value: "+373 62 149 223", href: "tel:+37362149223" },
+      { icon: "📸", label: "Instagram", value: "@tk_victorb", href: "https://instagram.com/tk_victorb" },
+      // exemplu ca să adaugi email — scoate // și pune adresa ta:
+      // { icon: "✉️", label: "Email", value: "adresa@ta.com", href: "mailto:adresa@ta.com" },
+    ],
+  },
 } as const;

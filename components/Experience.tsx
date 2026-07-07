@@ -13,6 +13,7 @@ import Jokes from "./Jokes";
 import FriendshipCounter from "./FriendshipCounter";
 import Letters from "./Letters";
 import Guestbook from "./Guestbook";
+import Contacts from "./Contacts";
 import Finale from "./Finale";
 import FloatingNav from "./FloatingNav";
 import EditProvider from "./EditProvider";
@@ -75,6 +76,8 @@ export default function Experience() {
               <Letters />
               <Divider />
               <Guestbook />
+              <Divider />
+              <Contacts />
               <Divider />
               <Finale />
               <footer className="pb-24 text-center text-xs tracking-widest text-[var(--star)]/40">
