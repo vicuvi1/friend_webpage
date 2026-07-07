@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --bg-deep: #05060f;
+  --bg-deep: #04050d;
   --bg-mid: #0a0f2c;
   --bg-glow: #1b2660;
   --star: #eaf0ff;
   --accent: #9db4ff;
   --gold: #ffd98a;
+  --rose: #ff9ec7;
+  --violet: #b79bff;
 }
 
 @theme inline {
@@ -23,52 +25,112 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Night-sky gradient used behind the whole experience */
+/* ---- Cerul de noapte ---- */
 .night-sky {
   background:
-    radial-gradient(1200px 700px at 70% -10%, var(--bg-glow) 0%, transparent 60%),
-    radial-gradient(900px 600px at 10% 110%, #241a4a 0%, transparent 55%),
-    linear-gradient(180deg, var(--bg-mid) 0%, var(--bg-deep) 70%);
+    radial-gradient(1200px 700px at 72% -8%, var(--bg-glow) 0%, transparent 60%),
+    radial-gradient(900px 600px at 8% 108%, #241a4a 0%, transparent 55%),
+    radial-gradient(700px 500px at 95% 40%, #2a1f52 0%, transparent 60%),
+    linear-gradient(180deg, #0b1030 0%, var(--bg-deep) 72%);
 }
 
-/* Glass panel */
+/* Aurora care se mișcă lent în fundal */
+.aurora {
+  position: absolute;
+  inset: -20% -10% auto -10%;
+  height: 70%;
+  background:
+    radial-gradient(40% 60% at 30% 40%, rgba(157, 180, 255, 0.22), transparent 70%),
+    radial-gradient(45% 55% at 70% 30%, rgba(183, 155, 255, 0.20), transparent 70%),
+    radial-gradient(35% 50% at 50% 60%, rgba(255, 158, 199, 0.14), transparent 70%);
+  filter: blur(60px);
+  animation: aurora-move 22s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes aurora-move {
+  0%, 100% { transform: translate3d(-3%, 0, 0) scale(1); opacity: 0.8; }
+  50% { transform: translate3d(4%, 4%, 0) scale(1.15); opacity: 1; }
+}
+
+/* Luna */
+.moon {
+  position: absolute;
+  top: 8%;
+  right: 9%;
+  width: 90px;
+  height: 90px;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 35% 35%, #fff7e6, #ffe9b8 45%, #d9c48f 100%);
+  box-shadow: 0 0 60px 20px rgba(255, 233, 184, 0.35), inset -12px -8px 24px rgba(120, 100, 60, 0.35);
+  pointer-events: none;
+}
+
+/* Glass */
 .glass {
-  background: rgba(18, 24, 56, 0.55);
+  background: rgba(18, 24, 56, 0.5);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(157, 180, 255, 0.18);
 }
 
-/* Twinkle for background stars */
+/* Sclipirea stelelor de fundal */
 @keyframes twinkle {
-  0%, 100% { opacity: 0.25; }
+  0%, 100% { opacity: 0.15; }
   50% { opacity: 1; }
 }
 
-/* Soft float for memory stars */
+/* Plutire pentru stelele-amintire */
 @keyframes floaty {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+  0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+  50% { transform: translate(-50%, -50%) translateY(-7px); }
 }
+.memory-star { animation: floaty 6s ease-in-out infinite; }
 
-.memory-star {
-  animation: floaty 6s ease-in-out infinite;
-}
-
-/* Glow pulse for interactive stars */
+/* Halou pulsator pentru stelele interactive */
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 12px 2px rgba(255, 217, 138, 0.55), 0 0 30px 6px rgba(157, 180, 255, 0.35); }
-  50% { box-shadow: 0 0 22px 6px rgba(255, 217, 138, 0.9), 0 0 55px 14px rgba(157, 180, 255, 0.55); }
+  0%, 100% { box-shadow: 0 0 12px 2px rgba(255,217,138,0.5), 0 0 30px 8px rgba(157,180,255,0.3); }
+  50% { box-shadow: 0 0 22px 6px rgba(255,217,138,0.9), 0 0 60px 18px rgba(157,180,255,0.55); }
 }
 
-.text-glow {
-  text-shadow: 0 0 24px rgba(157, 180, 255, 0.55);
+/* Stele căzătoare */
+.shooting {
+  position: absolute;
+  height: 2px;
+  width: 120px;
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.9));
+  border-radius: 9999px;
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.8));
+  opacity: 0;
+  animation: shoot linear infinite;
+}
+@keyframes shoot {
+  0% { opacity: 0; transform: translate(0,0) rotate(20deg) scaleX(0.2); }
+  6% { opacity: 1; }
+  14% { opacity: 1; transform: translate(-380px, 180px) rotate(20deg) scaleX(1); }
+  16%, 100% { opacity: 0; transform: translate(-420px, 200px) rotate(20deg) scaleX(1); }
 }
 
-/* thin scrollbar for guestbook */
+.text-glow { text-shadow: 0 0 24px rgba(157, 180, 255, 0.55); }
+
+/* Titlu cu gradient animat */
+.gradient-text {
+  background: linear-gradient(100deg, var(--star), var(--gold), var(--rose), var(--accent), var(--star));
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 8s linear infinite;
+}
+@keyframes shimmer {
+  to { background-position: 250% center; }
+}
+
+/* Bară de statistici */
+@keyframes grow-bar { from { width: 0; } }
+
 .scroll-thin::-webkit-scrollbar { width: 6px; }
 .scroll-thin::-webkit-scrollbar-thumb { background: rgba(157,180,255,0.35); border-radius: 999px; }
 
 @media (prefers-reduced-motion: reduce) {
-  .memory-star, [class*="animate"] { animation: none !important; }
+  .memory-star, .aurora, .shooting, .gradient-text, [class*="animate"] { animation: none !important; }
 }

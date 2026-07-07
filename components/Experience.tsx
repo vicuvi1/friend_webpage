@@ -1,19 +1,28 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import StarField from "./StarField";
 import Intro from "./Intro";
 import Constellation from "./Constellation";
 import MemoryModal from "./MemoryModal";
+import Quotes from "./Quotes";
+import Timeline from "./Timeline";
+import Stats from "./Stats";
 import Letters from "./Letters";
 import Guestbook from "./Guestbook";
 import Finale from "./Finale";
-import type { Memory } from "@/lib/data";
+import FloatingNav from "./FloatingNav";
+import { memories } from "@/lib/data";
+import { config } from "@/lib/config";
 
 export default function Experience() {
   const [opened, setOpened] = useState(false);
-  const [selected, setSelected] = useState<Memory | null>(null);
+  const [index, setIndex] = useState<number | null>(null);
+
+  const random = useCallback(() => {
+    setIndex(Math.floor(Math.random() * memories.length));
+  }, []);
 
   return (
     <main className="night-sky relative min-h-screen w-full overflow-x-hidden">
@@ -30,22 +39,34 @@ export default function Experience() {
               animate={{ opacity: 1 }}
               transition={{ duration: 1.2 }}
             >
-              <Constellation onSelect={setSelected} />
+              <Constellation onSelect={setIndex} />
+              <Quotes />
+              <Divider />
+              <Timeline onSelect={setIndex} />
+              <Divider />
+              <Stats />
               <Divider />
               <Letters />
               <Divider />
               <Guestbook />
               <Divider />
               <Finale />
-              <footer className="pb-12 text-center text-xs tracking-widest text-[var(--star)]/40">
-                ✦ făcut cu drag, de Victor ✦
+              <footer className="pb-24 text-center text-xs tracking-widest text-[var(--star)]/40">
+                ✦ făcut cu drag, de {config.yourName} ✦
               </footer>
+
+              <FloatingNav onRandom={random} />
             </motion.div>
           )}
         </AnimatePresence>
       </div>
 
-      <MemoryModal memory={selected} onClose={() => setSelected(null)} />
+      <MemoryModal
+        memories={memories}
+        index={index}
+        onNavigate={setIndex}
+        onClose={() => setIndex(null)}
+      />
     </main>
   );
 }

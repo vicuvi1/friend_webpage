@@ -36,8 +36,8 @@ export default function Guestbook() {
   }
 
   return (
-    <section className="relative mx-auto w-full max-w-3xl px-4 py-20">
-      <h2 className="text-center font-display text-4xl font-medium text-glow sm:text-5xl">
+    <section id="oaspeti" className="relative mx-auto w-full max-w-3xl px-4 py-20">
+      <h2 className="text-center font-display text-4xl font-medium gradient-text sm:text-5xl">
         Lasă un gând
       </h2>
       <p className="mt-3 text-center text-sm tracking-widest text-[var(--star)]/60">

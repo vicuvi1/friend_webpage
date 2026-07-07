@@ -1,24 +1,21 @@
-/* =========================================================================
- *  🌌  AMINTIRILE (stelele) + SCRISORILE
- *
- *  Fiecare stea = o amintire. Pozele stau in  /public/memories/
- *  Ca sa schimbi textul, editeaza pur si simplu ce e intre ghilimele mai jos.
- *  `x` si `y` sunt pozitia stelei pe cer (0–100). `size` = marimea stelei.
- * ========================================================================= */
+/* ============================================================================
+ *  ✍️  EDITEAZĂ AICI — AMINTIRI, SCRISORI, CITATE, STATISTICI
+ *  Schimbă doar textul dintre ghilimele "...". Vezi și EDITARE.md.
+ *  Pozele stau în /public/memories/ (pune alta cu ACELAȘI nume ca s-o schimbi).
+ * ========================================================================== */
 
 export type Memory = {
   id: string;
   title: string;
-  date: string; // text liber, ex. "Vara 2023"
+  date: string; // text liber: "Vara 2023", "Azi", etc.
   story: string;
   image: string; // "/memories/xyz.jpg"
-  x: number; // 0–100  (pozitie pe orizontala)
-  y: number; // 0–100  (pozitie pe verticala)
-  size?: number; // marimea stelei in px (implicit 15)
+  x: number; // 0–100  poziția stelei pe orizontală
+  y: number; // 0–100  poziția pe verticală
+  size?: number; // mărimea stelei (implicit 15)
 };
 
-/* Ordinea de mai jos e cronologica — asa se aprind stelele si asa se
- * traseaza linia care leaga amintirile, ca o poveste de la inceput pana azi. */
+/* Ordinea = ordinea în care se aprind stelele și linia care le leagă. */
 export const memories: Memory[] = [
   {
     id: "inceput",
@@ -27,9 +24,7 @@ export const memories: Memory[] = [
     story:
       "Prima poză dintr-o grămadă care avea să vină. Pe atunci nici nu bănuiam cât de mult o să însemne prietenia asta. Uite de unde am plecat.",
     image: "/memories/inceput.jpg",
-    x: 14,
-    y: 27,
-    size: 18,
+    x: 10, y: 26, size: 18,
   },
   {
     id: "traditie",
@@ -38,9 +33,16 @@ export const memories: Memory[] = [
     story:
       "Îmbrăcați frumos, cu tricolorul în spate. Zilele în care ne simțeam parte din ceva mai mare decât noi.",
     image: "/memories/traditie.jpg",
-    x: 29,
-    y: 15,
-    size: 15,
+    x: 20, y: 14, size: 14,
+  },
+  {
+    id: "stil",
+    title: "Băieți de oraș",
+    date: "2024",
+    story:
+      "Geci de piele și atitudine. Ne credeam cei mai tari din tot orașul — și, sincer, în ziua aia chiar eram.",
+    image: "/memories/stil.jpg",
+    x: 31, y: 24, size: 14,
   },
   {
     id: "facultate",
@@ -49,9 +51,16 @@ export const memories: Memory[] = [
     story:
       "Pauze între cursuri, semne de pace și prostii. Facultatea ar fi fost pe jumătate fără tine în bancă lângă mine.",
     image: "/memories/facultate.jpg",
-    x: 41,
-    y: 33,
-    size: 15,
+    x: 43, y: 15, size: 15,
+  },
+  {
+    id: "eveniment",
+    title: "La costum",
+    date: "2024",
+    story:
+      "Rar ne vezi aranjați așa. Dar când o facem, o facem ca lumea — și tot găsim un motiv de râs pe la colțuri.",
+    image: "/memories/eveniment.jpg",
+    x: 40, y: 33, size: 14,
   },
   {
     id: "craciun",
@@ -60,9 +69,16 @@ export const memories: Memory[] = [
     story:
       "Căciula de Moș, frigul de afară și noi doi. Sărbătorile n-au fost niciodată la fel de bune ca alături de un prieten adevărat.",
     image: "/memories/craciun.jpg",
-    x: 53,
-    y: 17,
-    size: 15,
+    x: 53, y: 13, size: 15,
+  },
+  {
+    id: "carte",
+    title: "Printre cărți",
+    date: "2025",
+    story:
+      "Chiar și când era vorba serios de învățat, tot găseam un motiv de glumă. Așa treceau cele mai grele zile mai ușor.",
+    image: "/memories/carte.jpg",
+    x: 60, y: 24, size: 14,
   },
   {
     id: "ziua",
@@ -71,9 +87,16 @@ export const memories: Memory[] = [
     story:
       "12 iulie. Ziua ta. Am prins deja câteva împreună și, dacă e după mine, mai prindem încă vreo cincizeci de-acum înainte.",
     image: "/memories/ziua.jpg",
-    x: 65,
-    y: 30,
-    size: 20,
+    x: 68, y: 33, size: 20,
+  },
+  {
+    id: "plimbare",
+    title: "Plimbare de primăvară",
+    date: "Primăvară 2025",
+    story:
+      "Iarna abia se dusese și noi deja puneam la cale următoarea aventură. Aerul curat și zero griji.",
+    image: "/memories/plimbare.jpg",
+    x: 76, y: 17, size: 14,
   },
   {
     id: "natura",
@@ -82,9 +105,7 @@ export const memories: Memory[] = [
     story:
       "O ieșire în parc, cer senin și semnul de pace obligatoriu. Zilele simple — fix cele pe care le ții minte cel mai bine.",
     image: "/memories/natura.jpg",
-    x: 79,
-    y: 19,
-    size: 15,
+    x: 87, y: 25, size: 15,
   },
   {
     id: "frizer",
@@ -93,9 +114,16 @@ export const memories: Memory[] = [
     story:
       "Mereu aranjați înainte de ceva important. Sau doar așa, ca să ne simțim bine. :)",
     image: "/memories/frizer.jpg",
-    x: 88,
-    y: 41,
-    size: 14,
+    x: 90, y: 40, size: 14,
+  },
+  {
+    id: "serile",
+    title: "Serile lungi",
+    date: "2025",
+    story:
+      "Din cele în care nu voiai să pleci acasă, fiindcă era prea bine acolo unde eram. Vorbe multe și râsete și mai multe.",
+    image: "/memories/serile.jpg",
+    x: 84, y: 52, size: 14,
   },
   {
     id: "oras",
@@ -104,9 +132,7 @@ export const memories: Memory[] = [
     story:
       "Fără plan, fără grabă, doar noi doi hoinărind. Cele mai bune aventuri au început mereu cu „hai să ieșim un pic”.",
     image: "/memories/oras.jpg",
-    x: 73,
-    y: 56,
-    size: 14,
+    x: 72, y: 56, size: 14,
   },
   {
     id: "biblioteca",
@@ -115,9 +141,16 @@ export const memories: Memory[] = [
     story:
       "Printre rafturi și cărți, cu ochii cârpiți de somn. Am trecut peste fiecare sesiune fiindcă știam că n-o ducem singuri.",
     image: "/memories/biblioteca.jpg",
-    x: 59,
-    y: 51,
-    size: 15,
+    x: 61, y: 49, size: 15,
+  },
+  {
+    id: "toamna",
+    title: "Toamnă și planuri",
+    date: "2025",
+    story:
+      "Frunze, cafea și planuri pe care jumătate nu le-am dus la capăt. Dar nu contează — important e că le-am făcut împreună.",
+    image: "/memories/toamna.jpg",
+    x: 52, y: 61, size: 14,
   },
   {
     id: "absolvire",
@@ -126,9 +159,7 @@ export const memories: Memory[] = [
     story:
       "Robe, toci și zâmbete până la urechi. Am ajuns aici împreună — și asta face diploma de două ori mai valoroasă.",
     image: "/memories/absolvire.jpg",
-    x: 45,
-    y: 63,
-    size: 20,
+    x: 43, y: 64, size: 20,
   },
   {
     id: "pisica",
@@ -137,9 +168,7 @@ export const memories: Memory[] = [
     story:
       "O pisică pe stradă și cinci minute de liniște la soare. Din nimicurile astea e făcută, de fapt, o prietenie.",
     image: "/memories/pisica.jpg",
-    x: 29,
-    y: 52,
-    size: 14,
+    x: 30, y: 53, size: 14,
   },
   {
     id: "acum",
@@ -148,24 +177,19 @@ export const memories: Memory[] = [
     story:
       "Trec anii, noi rămânem la fel. Steaua asta strălucește cel mai tare fiindcă povestea încă se scrie.",
     image: "/memories/acum.jpg",
-    x: 15,
-    y: 64,
-    size: 22,
+    x: 15, y: 62, size: 22,
   },
 ];
 
-/* -------------------------------------------------------------------------
- *  SCRISORI  —  plicuri „deschide când...”.
- *  Daca `unlockDate` e o data din viitor, scrisoarea ramane sigilata pana atunci
- *  (se verifica direct in browser). Lasa `unlockDate` gol ("") pentru scrisori
- *  mereu deschise.
- * ---------------------------------------------------------------------- */
-
+/* ----------------------------------------------------------------------------
+ *  SCRISORI — plicuri „deschide când...”. Dacă `unlockDate` e în viitor,
+ *  scrisoarea rămâne sigilată până atunci. Lasă "" pentru mereu deschisă.
+ * -------------------------------------------------------------------------- */
 export type Letter = {
   id: string;
   title: string;
   content: string;
-  unlockDate?: string; // data ISO, sau "" pentru mereu deschis
+  unlockDate?: string; // dată ISO, sau ""
 };
 
 export const letters: Letter[] = [
@@ -173,7 +197,7 @@ export const letters: Letter[] = [
     id: "ziua",
     title: "Deschide de ziua ta",
     content:
-      "La mulți ani, Petru! 🎉\n\nSper că zâmbești în timp ce citești asta. Nu ți-am luat un lucru pe care să-l pui pe raft și să-l uiți — ți-am făcut un cer, ca să ai unde să te întorci oricând vrei să-ți amintești de noi.\n\nSă ai un an cât toate stelele de aici la un loc. Te iubesc, frate.",
+      "La mulți ani, Petru! 🎉\n\nSper că zâmbești în timp ce citești asta. Nu ți-am luat un lucru pe care să-l pui pe raft și să-l uiți — ți-am făcut un cer, ca să ai unde te întoarce oricând vrei să-ți amintești de noi.\n\nSă ai un an cât toate stelele de aici la un loc. Te iubesc, frate.",
     unlockDate: "",
   },
   {
@@ -204,4 +228,25 @@ export const letters: Letter[] = [
       "Dacă citești asta, înseamnă că am ajuns mai departe decât ne așteptam amândoi. Sunt curios cine suntem acum.\n\nSper că suntem tot noi. Scrisoarea asta rămâne sigilată până în 2030.",
     unlockDate: "2030-01-01T00:00:00",
   },
+];
+
+/* ----------------------------------------------------------------------------
+ *  CITATE — se rotesc singure în secțiunea de sub constelație.
+ * -------------------------------------------------------------------------- */
+export const quotes: string[] = [
+  "Un prieten adevărat te vede la cel mai prost moment al tău și tot rămâne.",
+  "Nu contează unde mergem, cât timp mergem împreună.",
+  "Cele mai bune amintiri au început cu „hai să facem o prostie”.",
+  "Frații nu se aleg. Pe tine te-aș fi ales oricum.",
+];
+
+/* ----------------------------------------------------------------------------
+ *  STATISTICI (de haz) — bare pline. `value` e procentul 0–100.
+ * -------------------------------------------------------------------------- */
+export const stats: { label: string; value: number }[] = [
+  { label: "Râsete garantate", value: 99 },
+  { label: "Idei geniale la 3 noaptea", value: 92 },
+  { label: "Planuri duse până la capăt", value: 41 },
+  { label: "„Mai stăm 5 minute”", value: 100 },
+  { label: "Frați pe viață", value: 100 },
 ];

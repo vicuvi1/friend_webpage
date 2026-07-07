@@ -22,8 +22,8 @@ export default function Letters() {
   const [open, setOpen] = useState<Letter | null>(null);
 
   return (
-    <section className="relative mx-auto w-full max-w-4xl px-4 py-20">
-      <h2 className="text-center font-display text-4xl font-medium text-glow sm:text-5xl">
+    <section id="scrisori" className="relative mx-auto w-full max-w-4xl px-4 py-20">
+      <h2 className="text-center font-display text-4xl font-medium gradient-text sm:text-5xl">
         Scrisori pentru mai târziu
       </h2>
       <p className="mt-3 text-center text-sm tracking-widest text-[var(--star)]/60">
