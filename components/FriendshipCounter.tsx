@@ -44,7 +44,7 @@ export default function FriendshipCounter() {
       </motion.div>
       {t && (
         <p className="mt-4 font-hand text-xl text-[var(--accent)]">
-          adică {t.hours}h {t.minutes}m {t.seconds}s de când te suport, miticule 😄
+          adică {t.hours}h {t.minutes}m {t.seconds}s de când te suport, mititelule 😄
         </p>
       )}
       <p className="mt-2 text-xs tracking-widest text-[var(--star)]/40">

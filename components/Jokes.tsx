@@ -12,7 +12,7 @@ export default function Jokes() {
     <section id="glume" className="relative mx-auto w-full max-w-4xl px-4 py-20">
       <Editable as="h2" id="ui.jokes.title" value="Glume interne" className="block text-center font-display text-4xl font-medium gradient-text sm:text-5xl" />
       <p className="mt-3 text-center text-sm tracking-widest text-[var(--star)]/60">
-        doar ale noastre · fără supărare, miticule
+        doar ale noastre · fără supărare, mititelule
       </p>
 
       <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">

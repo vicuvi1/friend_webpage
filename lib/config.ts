@@ -15,7 +15,7 @@ export const config = {
   tagline: "Fiecare stea e o clipă pe care am trăit-o împreună.",
 
   /** Butonul care deschide cartea amintirilor. */
-  openButton: "Hai, deschide, miticule 👀",
+  openButton: "Hai, deschide, mititelule 👀",
 
   /** Data de când vă cunoașteți — pentru contorul „suntem prieteni de X zile". */
   friendshipStart: "2023-09-01",
@@ -24,7 +24,7 @@ export const config = {
   surprise: {
     /** Mesajul de suflet dezvăluit chiar la final. */
     message:
-      "La mulți ani, miticule! 🎉 (Da, tot miticul rămâi, degeaba te ridici pe vârfuri.) " +
+      "La mulți ani, mititelule! 🎉 (Da, tot mititelul rămâi, degeaba te ridici pe vârfuri.) " +
       "Ești cel mai deștept prost pe care-l cunosc și cel mai bun prieten pe care puteam să-l am. " +
       "Ți-am făcut un cer în loc de-un cadou banal — și singura condiție e să lași țigările, " +
       "ca să mai aprindem împreună cât mai multe stele de-acum înainte. " +

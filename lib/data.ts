@@ -175,7 +175,7 @@ export const memories: Memory[] = [
     title: "Încă aici, încă frați",
     date: "Azi",
     story:
-      "Trec anii, tu tot miticul rămâi — dar frate-mi ești pe viață. Steaua asta strălucește cel mai tare fiindcă povestea încă se scrie.",
+      "Trec anii, tu tot mititelul rămâi — dar frate-mi ești pe viață. Steaua asta strălucește cel mai tare fiindcă povestea încă se scrie.",
     image: "/memories/acum.jpg",
     x: 15, y: 62, size: 22,
   },
@@ -184,7 +184,7 @@ export const memories: Memory[] = [
     title: "Zâmbește mai des",
     date: "",
     story:
-      "Ăsta ești tu când uiți să te mai prefaci dur. Zâmbește mai des, miticule — îți stă de o mie de ori mai bine așa.",
+      "Ăsta ești tu când uiți să te mai prefaci dur. Zâmbește mai des, mititelule — îți stă de o mie de ori mai bine așa.",
     image: "/memories/zambeste.jpg",
     x: 50, y: 41, size: 18,
   },
@@ -206,7 +206,7 @@ export const letters: Letter[] = [
     id: "ziua",
     title: "Deschide de ziua ta",
     content:
-      "La mulți ani, miticule! 🎉\n\nSper că zâmbești în timp ce citești asta. Nu ți-am luat un lucru pe care să-l pui pe raft și să-l uiți — ți-am făcut un cer întreg, ca să ai unde te întoarce oricând vrei să-ți amintești de noi.\n\nSă ai un an cât toate stelele de aici la un loc. Și lasă țigările, bro. Te iubesc, frate.",
+      "La mulți ani, mititelule! 🎉\n\nSper că zâmbești în timp ce citești asta. Nu ți-am luat un lucru pe care să-l pui pe raft și să-l uiți — ți-am făcut un cer întreg, ca să ai unde te întoarce oricând vrei să-ți amintești de noi.\n\nSă ai un an cât toate stelele de aici la un loc. Și lasă țigările, bro. Te iubesc, frate.",
     unlockDate: "",
   },
   {
@@ -220,7 +220,7 @@ export const letters: Letter[] = [
     id: "greu",
     title: "Deschide când ți-e greu",
     content:
-      "Ascultă-mă, miticule: ai avut zile mai grele decât asta și tot aici ești. O să treacă și asta, exact cum au trecut toate celelalte.\n\nEști mai deștept și mai tare decât crezi. Iar dacă nu treci singur peste ea, știi unde mă găsești. Mereu.",
+      "Ascultă-mă, mititelule: ai avut zile mai grele decât asta și tot aici ești. O să treacă și asta, exact cum au trecut toate celelalte.\n\nEști mai deștept și mai tare decât crezi. Iar dacă nu treci singur peste ea, știi unde mă găsești. Mereu.",
     unlockDate: "",
   },
   {
@@ -244,7 +244,7 @@ export const letters: Letter[] = [
  * -------------------------------------------------------------------------- */
 export const quotes: string[] = [
   "Un prieten adevărat te vede la cel mai prost moment și tot rămâne. (Da, mă refer la tine, răule.)",
-  "Nu contează unde mergem, cât timp mergem împreună — și cât timp ții pasul, miticule.",
+  "Nu contează unde mergem, cât timp mergem împreună — și cât timp ții pasul, mititelule.",
   "Cele mai bune amintiri au început cu „hai să facem o prostie”.",
   "Frații nu se aleg. Pe tine te-aș fi ales oricum — chiar și cu țigările tale.",
   "Ești deșteptul grupei, bro. Păcat că nu se vede mereu.",
