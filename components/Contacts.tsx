@@ -5,7 +5,8 @@ import { config } from "@/lib/config";
 import Editable from "./Editable";
 
 export default function Contacts() {
-  const { intro, items } = config.contact;
+  const { intro } = config.contact;
+  const items = [...config.contact.items];
   if (items.length === 0) return null;
 
   return (
