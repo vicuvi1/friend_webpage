@@ -11,7 +11,7 @@ function isLocked(letter: Letter) {
 
 function unlockLabel(letter: Letter) {
   if (!letter.unlockDate) return "";
-  return new Date(letter.unlockDate).toLocaleDateString(undefined, {
+  return new Date(letter.unlockDate).toLocaleDateString("ro-RO", {
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -24,10 +24,10 @@ export default function Letters() {
   return (
     <section className="relative mx-auto w-full max-w-4xl px-4 py-20">
       <h2 className="text-center font-display text-4xl font-medium text-glow sm:text-5xl">
-        Letters for later
+        Scrisori pentru mai târziu
       </h2>
       <p className="mt-3 text-center text-sm tracking-widest text-[var(--star)]/60">
-        open them when the moment is right
+        deschide-le când e momentul potrivit
       </p>
 
       <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2">
@@ -52,11 +52,11 @@ export default function Letters() {
               <span className="font-display text-2xl font-medium">{l.title}</span>
               {locked ? (
                 <span className="font-hand text-lg text-[var(--accent)]">
-                  sealed until {unlockLabel(l)}
+                  sigilată până pe {unlockLabel(l)}
                 </span>
               ) : (
                 <span className="text-sm tracking-wide text-[var(--gold)]/80 opacity-0 transition-opacity group-hover:opacity-100">
-                  tap to open →
+                  atinge ca să deschizi →
                 </span>
               )}
             </motion.button>

@@ -39,7 +39,7 @@ export default function Finale() {
         className="glass rounded-full px-10 py-4 text-sm uppercase tracking-[0.25em] text-[var(--gold)] hover:border-[var(--gold)]/60"
         style={{ animation: "pulse-glow 3.5s ease-in-out infinite" }}
       >
-        One last surprise
+        O ultimă surpriză
       </motion.button>
 
       <AnimatePresence>
@@ -111,8 +111,8 @@ export default function Finale() {
               {cd && !cd.done && (
                 <div className="mt-4 flex justify-center gap-4 sm:gap-6">
                   {[
-                    ["days", cd.days],
-                    ["hrs", cd.hours],
+                    ["zile", cd.days],
+                    ["ore", cd.hours],
                     ["min", cd.minutes],
                     ["sec", cd.seconds],
                   ].map(([label, val]) => (
@@ -129,7 +129,7 @@ export default function Finale() {
               )}
               {cd?.done && (
                 <p className="mt-4 font-display text-3xl text-[var(--gold)]">
-                  It&apos;s time. ❤️
+                  A sosit clipa. ❤️
                 </p>
               )}
             </motion.div>

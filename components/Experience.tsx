@@ -38,7 +38,7 @@ export default function Experience() {
               <Divider />
               <Finale />
               <footer className="pb-12 text-center text-xs tracking-widest text-[var(--star)]/40">
-                ✦ made with love ✦
+                ✦ făcut cu drag, de Victor ✦
               </footer>
             </motion.div>
           )}

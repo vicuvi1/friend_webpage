@@ -5,23 +5,23 @@ import "./globals.css";
 const display = Cormorant_Garamond({
   variable: "--font-display",
   weight: ["400", "500", "600"],
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"], // latin-ext = diacriticele românești ș ț ă â î
 });
 
 const hand = Caveat({
   variable: "--font-hand",
   weight: ["400", "600"],
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
 });
 
 const body = Inter({
   variable: "--font-body",
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
 });
 
 export const metadata: Metadata = {
-  title: "A little sky, just for you",
-  description: "Every star is a moment we shared.",
+  title: "Un cer, doar pentru tine",
+  description: "Fiecare stea e o clipă pe care am trăit-o împreună.",
   robots: { index: false, follow: false },
 };
 

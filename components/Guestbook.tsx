@@ -27,10 +27,10 @@ export default function Guestbook() {
     const res = await addMessage(name, text);
     if (res.ok) {
       setText("");
-      setStatus("Added to the sky ✨");
+      setStatus("Adăugat pe cer ✨");
       setMessages(await fetchMessages());
     } else {
-      setStatus(res.error ?? "Something went wrong");
+      setStatus(res.error ?? "Ceva n-a mers");
     }
     setSending(false);
   }
@@ -38,18 +38,18 @@ export default function Guestbook() {
   return (
     <section className="relative mx-auto w-full max-w-3xl px-4 py-20">
       <h2 className="text-center font-display text-4xl font-medium text-glow sm:text-5xl">
-        Leave a mark
+        Lasă un gând
       </h2>
       <p className="mt-3 text-center text-sm tracking-widest text-[var(--star)]/60">
-        every visit is another memory
+        fiecare vizită e o altă amintire
       </p>
 
       {!isSupabaseEnabled ? (
         <div className="glass mt-10 rounded-2xl p-6 text-center text-[var(--star)]/70">
-          <p className="text-lg">The guestbook isn&apos;t connected yet.</p>
+          <p className="text-lg">Cartea de oaspeți nu e conectată încă.</p>
           <p className="mt-2 text-sm">
-            Add your Supabase keys (see the README) and messages will appear here —
-            you two can keep writing in it for years.
+            Adaugă cheile de Supabase (vezi README) și mesajele vor apărea aici —
+            puteți scrie amândoi în ea ani de zile.
           </p>
         </div>
       ) : (
@@ -58,14 +58,14 @@ export default function Guestbook() {
             <input
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="Your name"
+              placeholder="Numele tău"
               maxLength={60}
               className="w-full rounded-lg bg-black/20 px-4 py-2 text-[var(--star)] outline-none ring-1 ring-white/10 focus:ring-[var(--gold)]/50"
             />
             <textarea
               value={text}
               onChange={(e) => setText(e.target.value)}
-              placeholder="Write something…"
+              placeholder="Scrie ceva…"
               maxLength={500}
               rows={3}
               className="mt-3 w-full resize-none rounded-lg bg-black/20 px-4 py-2 text-[var(--star)] outline-none ring-1 ring-white/10 focus:ring-[var(--gold)]/50"
@@ -77,7 +77,7 @@ export default function Guestbook() {
                 disabled={sending}
                 className="rounded-full bg-[var(--gold)]/90 px-6 py-2 text-sm font-medium text-[#1a1400] transition hover:bg-[var(--gold)] disabled:opacity-50"
               >
-                {sending ? "Sending…" : "Sign the sky"}
+                {sending ? "Se trimite…" : "Semnează cerul"}
               </button>
             </div>
           </form>
@@ -93,7 +93,7 @@ export default function Guestbook() {
                 <div className="flex items-baseline justify-between gap-2">
                   <span className="font-hand text-xl text-[var(--gold)]">{m.name}</span>
                   <span className="text-xs text-[var(--star)]/40">
-                    {new Date(m.created_at).toLocaleDateString()}
+                    {new Date(m.created_at).toLocaleDateString("ro-RO")}
                   </span>
                 </div>
                 <p className="mt-1 text-[var(--star)]/85">{m.message}</p>
@@ -101,7 +101,7 @@ export default function Guestbook() {
             ))}
             {messages.length === 0 && (
               <p className="text-center text-[var(--star)]/50">
-                Be the first to write something.
+                Fii primul care scrie ceva.
               </p>
             )}
           </div>

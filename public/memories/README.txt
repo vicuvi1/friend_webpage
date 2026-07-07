@@ -1,10 +1,10 @@
-Put your photos here.
+Aici stau pozele care apar pe site (deja optimizate).
 
-The site looks for these filenames (defined in lib/data.ts):
-  met.jpg, trip.jpg, competition.jpg, birthday.jpg, ordinary.jpg, now.jpg
-  finale.jpg   (the photo for the "One Last Surprise" ending)
+Stelele din lib/data.ts folosesc aceste fișiere:
+  inceput.jpg, traditie.jpg, facultate.jpg, craciun.jpg, ziua.jpg,
+  natura.jpg, frizer.jpg, oras.jpg, biblioteca.jpg, absolvire.jpg,
+  pisica.jpg, acum.jpg
+  finale.jpg   (poza pentru "O ultimă surpriză")
 
-You can rename/add as many as you like — just keep lib/data.ts in sync.
-Any missing photo shows a soft starry placeholder, so the site never breaks.
-
-Tip: keep photos under ~1–2 MB each (resize huge phone photos) so it loads fast.
+Ca să schimbi o poză: pune alta cu ACELAȘI nume aici (ideal < 1–2 MB).
+Ca să adaugi o stea nouă: pune poza aici și adaugă o intrare în lib/data.ts.

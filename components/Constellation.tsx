@@ -17,7 +17,7 @@ export default function Constellation({
         transition={{ duration: 1 }}
         className="text-center font-display text-4xl font-medium text-glow sm:text-5xl"
       >
-        Our constellation
+        Constelația noastră
       </motion.h2>
       <motion.p
         initial={{ opacity: 0 }}
@@ -26,7 +26,7 @@ export default function Constellation({
         transition={{ delay: 0.3, duration: 1 }}
         className="mt-3 text-center text-sm tracking-widest text-[var(--star)]/60"
       >
-        touch a star to open the memory
+        atinge o stea ca să deschizi amintirea
       </motion.p>
 
       {/* The sky canvas */}

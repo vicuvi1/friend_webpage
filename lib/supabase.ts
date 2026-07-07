@@ -39,12 +39,12 @@ export async function addMessage(
   name: string,
   message: string
 ): Promise<{ ok: boolean; error?: string }> {
-  if (!client) return { ok: false, error: "Guestbook is not connected yet." };
+  if (!client) return { ok: false, error: "Cartea de oaspeți nu e conectată încă." };
   const clean = {
     name: name.trim().slice(0, 60) || "Anonymous",
     message: message.trim().slice(0, 500),
   };
-  if (!clean.message) return { ok: false, error: "Write something first 🙂" };
+  if (!clean.message) return { ok: false, error: "Scrie ceva mai întâi 🙂" };
   const { error } = await client.from("messages").insert(clean);
   if (error) return { ok: false, error: error.message };
   return { ok: true };

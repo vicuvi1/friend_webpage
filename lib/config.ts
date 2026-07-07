@@ -1,33 +1,33 @@
 /* =========================================================================
- *  💛  PERSONALIZE ME  💛
- *  This is the ONE file you edit for the personal touches.
- *  (Photos + memories live in lib/data.ts)
+ *  💛  PERSONALIZEAZĂ  💛
+ *  Ăsta e singurul fișier pentru detaliile personale.
+ *  (Pozele + amintirile sunt în lib/data.ts)
  * ========================================================================= */
 
 export const config = {
-  /** Your friend's name — shown on the intro screen. */
+  /** Numele prietenului — apare pe ecranul de intro. */
   friendName: "Petru",
 
-  /** Your name — shown in the closing message. */
+  /** Numele tău — apare în mesajul de final. */
   yourName: "Victor",
 
-  /** The line that fades in on the intro screen. */
-  tagline: "Every star is a moment we shared.",
+  /** Linia care apare încet pe ecranul de intro. */
+  tagline: "Fiecare stea e o clipă pe care am trăit-o împreună.",
 
-  /** The button that opens the memory book. */
-  openButton: "Open the memory book",
+  /** Butonul care deschide cartea amintirilor. */
+  openButton: "Deschide cartea amintirilor",
 
-  /** ---- One Last Surprise (the finale) ---- */
+  /** ---- O ultimă surpriză (finalul) ---- */
   surprise: {
-    /** The heartfelt message revealed at the very end. */
+    /** Mesajul de suflet dezvăluit chiar la final. */
     message:
-      "No matter where life takes us, these memories will always exist here. " +
-      "Thank you for every laugh, every trip, every ordinary day that turned out to matter. " +
-      "Here's to all the stars we haven't added yet.",
-    /** Photo shown during the finale (put it in /public/memories/). */
+      "Petru, orice ar urma și oricât de departe ne-ar duce viața, cerul ăsta rămâne aici — al nostru. " +
+      "Mulțumesc pentru fiecare râs, fiecare drum și fiecare zi obișnuită care s-a dovedit a conta. " +
+      "La mulți ani! Aici sunt toate stelele de până acum — și e loc berechet pentru toate cele pe care încă nu le-am aprins.",
+    /** Poza afișată în timpul finalului. */
     photo: "/memories/finale.jpg",
-    /** Countdown target — your next planned memory (his birthday, next trip, etc.). ISO date. */
-    countdownLabel: "See you on your birthday, Petru — in",
+    /** Ținta numărătorii inverse — următoarea amintire (ziua lui, o excursie etc.). Dată ISO. */
+    countdownLabel: "Ne vedem de ziua ta, Petru — peste",
     countdownDate: "2026-07-12T00:00:00",
   },
 } as const;

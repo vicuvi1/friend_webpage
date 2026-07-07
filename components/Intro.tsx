@@ -16,7 +16,7 @@ export default function Intro({ onOpen }: { onOpen: () => void }) {
         transition={{ delay: 0.4, duration: 1.2 }}
         className="font-hand text-2xl text-[var(--accent)]"
       >
-        for
+        pentru
       </motion.p>
 
       <motion.h1
@@ -55,7 +55,7 @@ export default function Intro({ onOpen }: { onOpen: () => void }) {
         transition={{ delay: 4, duration: 2 }}
         className="absolute bottom-8 text-xs tracking-widest text-[var(--star)]/40"
       >
-        ✦ scroll gently ✦
+        ✦ derulează ușor ✦
       </motion.div>
     </motion.div>
   );

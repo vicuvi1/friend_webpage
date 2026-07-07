@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# arhiva originala cu poze brute (nu o urcam pe git — folosim doar public/memories/)
+Send Anywhere*/
+*.HEIC
+*.heic
