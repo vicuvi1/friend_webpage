@@ -9,6 +9,8 @@ import MemoryModal from "./MemoryModal";
 import Quotes from "./Quotes";
 import Timeline from "./Timeline";
 import Stats from "./Stats";
+import Jokes from "./Jokes";
+import FriendshipCounter from "./FriendshipCounter";
 import Letters from "./Letters";
 import Guestbook from "./Guestbook";
 import Finale from "./Finale";
@@ -42,9 +44,13 @@ export default function Experience() {
               <Constellation onSelect={setIndex} />
               <Quotes />
               <Divider />
+              <FriendshipCounter />
+              <Divider />
               <Timeline onSelect={setIndex} />
               <Divider />
               <Stats />
+              <Divider />
+              <Jokes />
               <Divider />
               <Letters />
               <Divider />

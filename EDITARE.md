@@ -55,6 +55,12 @@ Lista `quotes` — un rând = un citat. Adaugă/șterge rânduri cum vrei.
 ### Statisticile de haz
 Lista `stats` — `label` = textul, `value` = procentul (0–100).
 
+### Glumele interne
+Lista `jokes` — un rând între ghilimele = o glumă. Adaugă câte vrei (pune virgulă la capăt).
+
+### Data prieteniei (contorul de zile)
+În `lib/config.ts`, câmpul `friendshipStart` (ex. `"2023-09-01"`).
+
 ---
 
 ## Diacriticele (ă â î ș ț)

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 const LINKS = [
   { id: "constelatie", label: "Stele" },
   { id: "cronologie", label: "Poveste" },
+  { id: "glume", label: "Glume" },
   { id: "scrisori", label: "Scrisori" },
   { id: "oaspeti", label: "Oaspeți" },
 ];

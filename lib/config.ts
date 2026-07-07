@@ -17,6 +17,9 @@ export const config = {
   /** Butonul care deschide cartea amintirilor. */
   openButton: "Hai, deschide, miticule 👀",
 
+  /** Data de când vă cunoașteți — pentru contorul „suntem prieteni de X zile". */
+  friendshipStart: "2023-09-01",
+
   /** ---- O ultimă surpriză (finalul) ---- */
   surprise: {
     /** Mesajul de suflet dezvăluit chiar la final. */

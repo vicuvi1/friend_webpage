@@ -242,6 +242,18 @@ export const quotes: string[] = [
 ];
 
 /* ----------------------------------------------------------------------------
+ *  GLUME INTERNE — perlele voastre. Fiecare rând între ghilimele = o glumă.
+ *  👇 ADAUGĂ GLUME NOI aici: pune o virgulă la capăt și scrie alt rând.
+ * -------------------------------------------------------------------------- */
+export const jokes: string[] = [
+  "Tare sper să mai crești la înălțime. Nu plânge, mititelule. 📏",
+  "Când o vezi pe Apostol, anină de tine o tonă (sau poate chiar două) de greutate, ca să nu te înghită câmpul ei gravitațional. 🪐",
+  "Prima ta mașină o să fie toate mașinile din lume. 🚗",
+  // "scrie aici următoarea glumă, între ghilimele",
+  // "și încă una, câte vrei",
+];
+
+/* ----------------------------------------------------------------------------
  *  STATISTICI (de haz) — bare pline. `value` e procentul 0–100.
  * -------------------------------------------------------------------------- */
 export const stats: { label: string; value: number }[] = [
