@@ -18,14 +18,32 @@ import FloatingNav from "./FloatingNav";
 import EditProvider from "./EditProvider";
 import { memories } from "@/lib/data";
 import { config } from "@/lib/config";
+import { enableAudio, playOpen, startAmbient, playStar, setMuted, getMutedInitial } from "@/lib/sound";
 
 export default function Experience() {
   const [opened, setOpened] = useState(false);
   const [index, setIndex] = useState<number | null>(null);
+  const [flash, setFlash] = useState(false);
+
+  const open = useCallback(() => {
+    setOpened(true);
+    setFlash(true);
+    setTimeout(() => setFlash(false), 1300);
+    // pornește sunetul (gest de user -> autoplay permis)
+    setMuted(getMutedInitial());
+    enableAudio();
+    playOpen();
+    startAmbient();
+  }, []);
+
+  const select = useCallback((i: number) => {
+    playStar();
+    setIndex(i);
+  }, []);
 
   const random = useCallback(() => {
-    setIndex(Math.floor(Math.random() * memories.length));
-  }, []);
+    select(Math.floor(Math.random() * memories.length));
+  }, [select]);
 
   return (
     <EditProvider>
@@ -35,7 +53,7 @@ export default function Experience() {
       <div className="relative z-10">
         <AnimatePresence mode="wait">
           {!opened ? (
-            <Intro key="intro" onOpen={() => setOpened(true)} />
+            <Intro key="intro" onOpen={open} />
           ) : (
             <motion.div
               key="book"
@@ -43,12 +61,12 @@ export default function Experience() {
               animate={{ opacity: 1 }}
               transition={{ duration: 1.2 }}
             >
-              <Constellation onSelect={setIndex} />
+              <Constellation onSelect={select} />
               <Quotes />
               <Divider />
               <FriendshipCounter />
               <Divider />
-              <Timeline onSelect={setIndex} />
+              <Timeline onSelect={select} />
               <Divider />
               <Stats />
               <Divider />
@@ -68,6 +86,23 @@ export default function Experience() {
           )}
         </AnimatePresence>
       </div>
+
+      {/* efectul mare de la deschidere: un val de lumină */}
+      <AnimatePresence>
+        {flash && (
+          <motion.div
+            className="pointer-events-none fixed inset-0 z-[65]"
+            initial={{ opacity: 0.9, scale: 0.2 }}
+            animate={{ opacity: 0, scale: 2.2 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.3, ease: "easeOut" }}
+            style={{
+              background:
+                "radial-gradient(circle at center, rgba(255,233,184,0.9), rgba(157,180,255,0.4) 40%, transparent 70%)",
+            }}
+          />
+        )}
+      </AnimatePresence>
 
       <MemoryModal
         memories={memories}

@@ -1,6 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
+import { setMuted, getMutedInitial } from "@/lib/sound";
 
 const LINKS = [
   { id: "constelatie", label: "Stele" },
@@ -11,8 +13,16 @@ const LINKS = [
 ];
 
 export default function FloatingNav({ onRandom }: { onRandom: () => void }) {
+  const [muted, setMutedState] = useState(getMutedInitial());
+
   const go = (id: string) =>
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+
+  const toggleMute = () => {
+    const m = !muted;
+    setMutedState(m);
+    setMuted(m);
+  };
 
   return (
     <motion.nav
@@ -30,6 +40,14 @@ export default function FloatingNav({ onRandom }: { onRandom: () => void }) {
           {l.label}
         </button>
       ))}
+      <button
+        onClick={toggleMute}
+        aria-label={muted ? "Pornește sunetul" : "Oprește sunetul"}
+        title={muted ? "Pornește sunetul" : "Oprește sunetul"}
+        className="rounded-full px-3 py-1.5 text-[var(--star)]/80 transition-colors hover:bg-white/10 hover:text-[var(--gold)]"
+      >
+        {muted ? "🔇" : "🔊"}
+      </button>
       <button
         onClick={onRandom}
         aria-label="O amintire la întâmplare"
