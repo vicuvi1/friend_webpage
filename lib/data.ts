@@ -179,6 +179,15 @@ export const memories: Memory[] = [
     image: "/memories/acum.jpg",
     x: 15, y: 62, size: 22,
   },
+  {
+    id: "zambet",
+    title: "Zâmbește mai des",
+    date: "",
+    story:
+      "Ăsta ești tu când uiți să te mai prefaci dur. Zâmbește mai des, miticule — îți stă de o mie de ori mai bine așa.",
+    image: "/memories/zambeste.jpg",
+    x: 50, y: 41, size: 18,
+  },
 ];
 
 /* ----------------------------------------------------------------------------
