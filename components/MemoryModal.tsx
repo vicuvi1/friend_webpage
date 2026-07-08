@@ -143,7 +143,6 @@ function Polaroid({ memory }: { memory: Memory }) {
           </div>
         )}
       </div>
-      <p className="mt-2 text-center font-hand text-lg text-[#2a2a2a]">{memory.title}</p>
     </motion.div>
   );
 }
