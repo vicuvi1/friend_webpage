@@ -11,7 +11,6 @@ import Stats from "./Stats";
 import Jokes from "./Jokes";
 import FriendshipCounter from "./FriendshipCounter";
 import Letters from "./Letters";
-import Guestbook from "./Guestbook";
 import Contacts from "./Contacts";
 import Finale from "./Finale";
 import FloatingNav from "./FloatingNav";
@@ -72,8 +71,6 @@ export default function Experience() {
               <Jokes />
               <Divider />
               <Letters />
-              <Divider />
-              <Guestbook />
               <Divider />
               <Contacts />
               <Divider />

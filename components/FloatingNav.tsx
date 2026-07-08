@@ -8,7 +8,6 @@ const LINKS = [
   { id: "constelatie", label: "Stele" },
   { id: "glume", label: "Glume" },
   { id: "scrisori", label: "Scrisori" },
-  { id: "oaspeti", label: "Oaspeți" },
   { id: "contact", label: "Contact" },
 ];
 
