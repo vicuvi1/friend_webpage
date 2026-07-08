@@ -14,7 +14,8 @@ function useDays(from: string) {
     return () => clearInterval(id);
   }, []);
   if (now === null) return null;
-  const start = new Date(from).getTime();
+  // forțăm ora locală (fără "T..." data se citește ca UTC -> decalaj de o zi noaptea)
+  const start = new Date(from.includes("T") ? from : `${from}T00:00:00`).getTime();
   const diff = Math.max(0, now - start);
   return {
     days: Math.floor(diff / 86400000),

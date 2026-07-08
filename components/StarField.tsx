@@ -13,7 +13,7 @@ function seeded(seed: number) {
 
 const COLORS = ["#ffffff", "#eaf0ff", "#cdd7ff", "#ffe9b8", "#ffd1e6"];
 
-export default function StarField({ count = 380, shooting = 5 }: { count?: number; shooting?: number }) {
+export default function StarField({ count = 300, shooting = 5 }: { count?: number; shooting?: number }) {
   const stars = useMemo(() => {
     const rand = seeded(1337);
     return Array.from({ length: count }, () => ({
@@ -38,7 +38,11 @@ export default function StarField({ count = 380, shooting = 5 }: { count?: numbe
   }, [shooting]);
 
   return (
-    <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+    <div
+      aria-hidden
+      className="pointer-events-none absolute inset-0 overflow-hidden"
+      style={{ contain: "layout paint style" }}
+    >
       <div className="aurora" />
       <div className="moon" />
 

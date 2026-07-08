@@ -22,7 +22,7 @@ export default function Contacts() {
         id="config.contact.intro"
         value={intro}
         multiline
-        className="mx-auto mt-4 block max-w-xl font-display text-xl italic text-[var(--star)]/80"
+        className="mx-auto mt-4 block max-w-xl whitespace-pre-line font-display text-xl italic text-[var(--star)]/80"
       />
 
       <div className="mt-10 flex flex-wrap justify-center gap-4">

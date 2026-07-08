@@ -34,7 +34,7 @@ export default function Quotes() {
             id={`quote.${i}`}
             value={quotes[i]}
             multiline
-            className="font-display text-2xl italic leading-relaxed text-[var(--star)]/90 sm:text-3xl"
+            className="whitespace-pre-line font-display text-2xl italic leading-relaxed text-[var(--star)]/90 sm:text-3xl"
           />
         </motion.div>
       </AnimatePresence>

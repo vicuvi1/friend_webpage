@@ -61,7 +61,14 @@ function Row({
         <div className="h-16 w-16 shrink-0 overflow-hidden rounded-lg bg-[var(--bg-glow)]">
           {!broken ? (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={m.image} alt={m.title} onError={() => setBroken(true)} className="h-full w-full object-cover transition-transform group-hover:scale-110" />
+            <img
+              src={m.image.replace("/memories/", "/memories/thumbs/")}
+              alt={m.title}
+              loading="lazy"
+              decoding="async"
+              onError={() => setBroken(true)}
+              className="h-full w-full object-cover transition-transform group-hover:scale-110"
+            />
           ) : (
             <div className="flex h-full w-full items-center justify-center text-[var(--gold)]/60">✦</div>
           )}

@@ -80,6 +80,7 @@ export default function Finale() {
               <motion.img
                 src={config.surprise.photo}
                 alt=""
+                decoding="async"
                 onError={() => setPhotoBroken(true)}
                 initial={{ opacity: 0, scale: 1.1 }}
                 animate={{ opacity: 0.9, scale: 1 }}
@@ -107,7 +108,7 @@ export default function Finale() {
                 id="config.surprise.message"
                 value={config.surprise.message}
                 multiline
-                className="mt-8 max-w-xl font-display text-2xl italic leading-relaxed text-white/90"
+                className="mt-8 max-w-xl whitespace-pre-line font-display text-2xl italic leading-relaxed text-white/90"
               />
             </motion.div>
 

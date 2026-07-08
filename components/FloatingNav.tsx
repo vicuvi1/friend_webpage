@@ -14,7 +14,7 @@ const LINKS = [
 ];
 
 export default function FloatingNav({ onRandom }: { onRandom: () => void }) {
-  const [muted, setMutedState] = useState(getMutedInitial());
+  const [muted, setMutedState] = useState(getMutedInitial);
 
   const go = (id: string) =>
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });

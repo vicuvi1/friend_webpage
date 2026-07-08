@@ -43,6 +43,7 @@ export default function Experience() {
   }, []);
 
   const random = useCallback(() => {
+    if (!memories.length) return;
     select(Math.floor(Math.random() * memories.length));
   }, [select]);
 
