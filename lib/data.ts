@@ -17,21 +17,11 @@ export type Memory = {
 
 /* Ordinea = ordinea în care se aprind stelele și linia care le leagă. */
 export const memories: Memory[] = [
-  {
-    id: "inceput",
-    title: "Unde a început totul",
-    date: "Septembrie 2023",
-    story:
-      "Prima poză dintr-o grămadă care avea să vină. Pe atunci nici nu bănuiam cât de mult o să însemne prietenia asta. Uite de unde am plecat.",
-    image: "/memories/inceput.jpg",
-    x: 10, y: 26, size: 18,
-  },
-  {
+    {
     id: "traditie",
     title: "Cu ie și mândrie",
     date: "Octombrie 2023",
-    story:
-      "Îmbrăcați frumos, cu tricolorul în spate. Zilele în care ne simțeam parte din ceva mai mare decât noi.",
+    story: "",
     image: "/memories/traditie.jpg",
     x: 20, y: 14, size: 14,
   },
@@ -39,8 +29,7 @@ export const memories: Memory[] = [
     id: "stil",
     title: "Băieți de oraș",
     date: "2024",
-    story:
-      "Geci de piele și atitudine. Ne credeam cei mai tari din tot orașul — și, sincer, în ziua aia chiar eram.",
+    story: "",
     image: "/memories/stil.jpg",
     x: 31, y: 24, size: 14,
   },
@@ -48,8 +37,7 @@ export const memories: Memory[] = [
     id: "facultate",
     title: "Viață de student",
     date: "Februarie 2024",
-    story:
-      "Pauze între cursuri, semne de pace și prostii. Facultatea ar fi fost pe jumătate fără tine în bancă lângă mine, bro.",
+    story: "",
     image: "/memories/facultate.jpg",
     x: 43, y: 15, size: 15,
   },
@@ -57,8 +45,7 @@ export const memories: Memory[] = [
     id: "eveniment",
     title: "La costum",
     date: "2024",
-    story:
-      "Rar ne vezi aranjați așa. Dar când o facem, o facem ca lumea — și tot găsim un motiv de râs pe la colțuri.",
+    story: "",
     image: "/memories/eveniment.jpg",
     x: 40, y: 33, size: 14,
   },
@@ -66,8 +53,7 @@ export const memories: Memory[] = [
     id: "craciun",
     title: "Crăciunul nostru",
     date: "Decembrie 2024",
-    story:
-      "Căciula de Moș, frigul de afară și noi doi. Sărbătorile n-au fost niciodată la fel de bune ca alături de un prieten adevărat.",
+    story: "",
     image: "/memories/craciun.jpg",
     x: 53, y: 13, size: 15,
   },
@@ -75,8 +61,7 @@ export const memories: Memory[] = [
     id: "carte",
     title: "Printre cărți",
     date: "2025",
-    story:
-      "Cu o carte de română în mână și fața de „iar ne pică Ungureanu”. Dar tot găseam un motiv de râs — așa treceau cele mai grele zile mai ușor.",
+    story: "",
     image: "/memories/carte.jpg",
     x: 60, y: 24, size: 14,
   },
@@ -84,8 +69,7 @@ export const memories: Memory[] = [
     id: "ziua",
     title: "La mulți ani, Petru",
     date: "12 iulie 2025",
-    story:
-      "12 iulie. Ziua ta. Am prins deja câteva împreună și, dacă e după mine, mai prindem încă vreo cincizeci de-acum înainte.",
+    story: "",
     image: "/memories/ziua.jpg",
     x: 68, y: 33, size: 20,
   },
@@ -93,8 +77,7 @@ export const memories: Memory[] = [
     id: "plimbare",
     title: "Plimbare de primăvară",
     date: "Primăvară 2025",
-    story:
-      "Iarna abia se dusese și noi deja puneam la cale următoarea aventură. Aerul curat și zero griji.",
+    story: "",
     image: "/memories/plimbare.jpg",
     x: 76, y: 17, size: 14,
   },
@@ -102,8 +85,7 @@ export const memories: Memory[] = [
     id: "natura",
     title: "Soare și zero griji",
     date: "Primăvară 2025",
-    story:
-      "O ieșire în parc, cer senin și semnul de pace obligatoriu. Zilele simple — fix cele pe care le ții minte cel mai bine.",
+    story: "",
     image: "/memories/natura.jpg",
     x: 87, y: 25, size: 15,
   },
@@ -111,8 +93,7 @@ export const memories: Memory[] = [
     id: "frizer",
     title: "Gata de un nou capitol",
     date: "2025",
-    story:
-      "Mereu aranjați înainte de ceva important. Sau doar așa, ca să ne simțim bine. :)",
+    story: "",
     image: "/memories/frizer.jpg",
     x: 90, y: 40, size: 14,
   },
@@ -120,8 +101,7 @@ export const memories: Memory[] = [
     id: "serile",
     title: "Serile lungi",
     date: "2025",
-    story:
-      "Din cele în care nu voiai să pleci acasă, fiindcă era prea bine acolo unde eram. Vorbe multe și râsete și mai multe.",
+    story: "",
     image: "/memories/serile.jpg",
     x: 84, y: 52, size: 14,
   },
@@ -129,8 +109,7 @@ export const memories: Memory[] = [
     id: "oras",
     title: "Prin oraș, ca de obicei",
     date: "2025",
-    story:
-      "Fără plan, fără grabă, doar noi doi hoinărind. Cele mai bune aventuri au început mereu cu „hai să ieșim un pic”.",
+    story: "",
     image: "/memories/oras.jpg",
     x: 72, y: 56, size: 14,
   },
@@ -138,8 +117,7 @@ export const memories: Memory[] = [
     id: "biblioteca",
     title: "Sesiune și supraviețuire",
     date: "Ianuarie 2026",
-    story:
-      "Printre rafturi și cărți, cu ochii cârpiți de somn. Am trecut peste fiecare sesiune fiindcă știam că n-o ducem singuri.",
+    story: "",
     image: "/memories/biblioteca.jpg",
     x: 61, y: 49, size: 15,
   },
@@ -147,8 +125,7 @@ export const memories: Memory[] = [
     id: "toamna",
     title: "Toamnă și planuri",
     date: "2025",
-    story:
-      "Frunze, cafea și planuri pe care jumătate nu le-am dus la capăt. Dar nu contează — important e că le-am făcut împreună.",
+    story: "",
     image: "/memories/toamna.jpg",
     x: 52, y: 61, size: 14,
   },
@@ -156,8 +133,7 @@ export const memories: Memory[] = [
     id: "absolvire",
     title: "Am reușit!",
     date: "Vara 2025",
-    story:
-      "Robe, toci și zâmbete până la urechi. Am ajuns aici împreună — și asta face diploma de două ori mai valoroasă.",
+    story: "",
     image: "/memories/absolvire.jpg",
     x: 43, y: 64, size: 20,
   },
@@ -165,8 +141,7 @@ export const memories: Memory[] = [
     id: "pisica",
     title: "O zi cât se poate de obișnuită",
     date: "2026",
-    story:
-      "O pisică pe stradă și cinci minute de liniște la soare. Din nimicurile astea e făcută, de fapt, o prietenie.",
+    story: "",
     image: "/memories/pisica.jpg",
     x: 30, y: 53, size: 14,
   },
@@ -174,8 +149,7 @@ export const memories: Memory[] = [
     id: "acum",
     title: "Încă aici, încă frați",
     date: "Azi",
-    story:
-      "Trec anii, tu tot mititelul rămâi — dar frate-mi ești pe viață. Steaua asta strălucește cel mai tare fiindcă povestea încă se scrie.",
+    story: "",
     image: "/memories/acum.jpg",
     x: 15, y: 62, size: 22,
   },
@@ -183,8 +157,7 @@ export const memories: Memory[] = [
     id: "zambet",
     title: "Zâmbește mai des",
     date: "",
-    story:
-      "Ăsta ești tu când uiți să te mai prefaci dur. Zâmbește mai des, mititelule — îți stă de o mie de ori mai bine așa.",
+    story: "",
     image: "/memories/zambeste.jpg",
     x: 50, y: 41, size: 18,
   },

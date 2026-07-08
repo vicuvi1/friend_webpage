@@ -79,7 +79,9 @@ export default function MemoryModal({
 
               <Editable as="p" id={`memory.${memory.id}.date`} value={memory.date} className="mt-5 block font-hand text-xl text-[var(--gold)]" />
               <Editable as="h2" id={`memory.${memory.id}.title`} value={memory.title} className="block font-display text-3xl font-medium" />
-              <Editable as="p" id={`memory.${memory.id}.story`} value={memory.story} multiline className="mt-3 block whitespace-pre-line leading-relaxed text-[var(--star)]/80" />
+              {memory.story && (
+                <Editable as="p" id={`memory.${memory.id}.story`} value={memory.story} multiline className="mt-3 block whitespace-pre-line leading-relaxed text-[var(--star)]/80" />
+              )}
 
               <p className="mt-5 text-center text-xs tracking-widest text-[var(--star)]/40">
                 {index + 1} / {memories.length} &nbsp;·&nbsp; folosește ← → sau săgețile
