@@ -19,10 +19,26 @@ const body = Inter({
   subsets: ["latin", "latin-ext"],
 });
 
+const SITE = "https://friend-webpage.vercel.app";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE),
   title: "Un cer, doar pentru tine",
   description: "Fiecare stea e o clipă pe care am trăit-o împreună.",
   robots: { index: false, follow: false },
+  openGraph: {
+    title: "Pentru Petru 🌌",
+    description: "Fiecare stea e o clipă pe care am trăit-o împreună.",
+    images: ["/og.jpg"],
+    type: "website",
+    locale: "ro_RO",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pentru Petru 🌌",
+    description: "Fiecare stea e o clipă pe care am trăit-o împreună.",
+    images: ["/og.jpg"],
+  },
 };
 
 export default function RootLayout({

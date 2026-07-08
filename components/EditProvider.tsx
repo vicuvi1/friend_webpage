@@ -93,8 +93,10 @@ export default function EditProvider({ children }: { children: React.ReactNode }
       {children}
 
       {unlocked && (
-        <div className="fixed left-4 top-4 z-[70] rounded-full bg-[var(--gold)]/90 px-3 py-1 text-xs font-medium text-[#1a1400] shadow-lg">
-          ✎ mod editare — dublu-click pe text
+        <div className="fixed left-4 top-4 z-[70] max-w-[80vw] rounded-full bg-[var(--gold)]/90 px-3 py-1 text-xs font-medium text-[#1a1400] shadow-lg">
+          {isSupabaseEnabled
+            ? "✎ mod editare — dublu-click pe text"
+            : "✎ mod editare (doar pe acest browser — pornește Supabase ca să vadă și Petru)"}
         </div>
       )}
 

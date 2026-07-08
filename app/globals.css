@@ -79,10 +79,10 @@ body {
   50% { opacity: 1; }
 }
 
-/* Plutire pentru stelele-amintire */
+/* Plutire pentru stelele-amintire (doar translateY — centrarea e pe părinte) */
 @keyframes floaty {
-  0%, 100% { transform: translate(-50%, -50%) translateY(0); }
-  50% { transform: translate(-50%, -50%) translateY(-7px); }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
 }
 .memory-star { animation: floaty 6s ease-in-out infinite; }
 

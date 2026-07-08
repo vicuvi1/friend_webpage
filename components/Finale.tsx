@@ -15,13 +15,27 @@ function useCountdown(target: string) {
     return () => clearInterval(id);
   }, []);
   if (now === null) return null;
-  const diff = Math.max(0, new Date(target).getTime() - now);
+
+  const base = new Date(target);
+  const month = base.getMonth();
+  const day = base.getDate();
+  const d = new Date(now);
+
+  // chiar azi e ziua? -> sărbătoare
+  if (d.getMonth() === month && d.getDate() === day) {
+    return { celebrate: true, days: 0, hours: 0, minutes: 0, seconds: 0 };
+  }
+
+  // altfel: numără spre următoarea aniversare (an curent sau anul viitor)
+  let next = new Date(d.getFullYear(), month, day, 0, 0, 0).getTime();
+  if (next <= now) next = new Date(d.getFullYear() + 1, month, day, 0, 0, 0).getTime();
+  const diff = Math.max(0, next - now);
   return {
+    celebrate: false,
     days: Math.floor(diff / 86400000),
     hours: Math.floor((diff / 3600000) % 24),
     minutes: Math.floor((diff / 60000) % 60),
     seconds: Math.floor((diff / 1000) % 60),
-    done: diff === 0,
   };
 }
 
@@ -113,9 +127,9 @@ export default function Finale() {
               className="mt-10"
             >
               <p className="text-xs uppercase tracking-[0.25em] text-white/50">
-                {config.surprise.countdownLabel}
+                {cd?.celebrate ? "Chiar azi!" : config.surprise.countdownLabel}
               </p>
-              {cd && !cd.done && (
+              {cd && !cd.celebrate && (
                 <div className="mt-4 flex justify-center gap-4 sm:gap-6">
                   {[
                     ["zile", cd.days],
@@ -134,9 +148,9 @@ export default function Finale() {
                   ))}
                 </div>
               )}
-              {cd?.done && (
+              {cd?.celebrate && (
                 <p className="mt-4 font-display text-3xl text-[var(--gold)]">
-                  A sosit clipa. ❤️
+                  La mulți ani, mititelule! 🎉❤️
                 </p>
               )}
             </motion.div>

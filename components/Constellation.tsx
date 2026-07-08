@@ -72,35 +72,37 @@ function MemoryStar({
 }) {
   const size = m.size ?? 15;
   return (
-    <motion.button
-      initial={{ opacity: 0, scale: 0 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true }}
-      transition={{ delay: 0.15 + index * 0.12, duration: 0.7, type: "spring" }}
-      whileHover={{ scale: 1.45 }}
-      onClick={() => onSelect(index)}
-      className="memory-star group absolute"
-      style={{ left: `${m.x}%`, top: `${m.y}%`, animationDelay: `${index * 0.5}s` }}
-      aria-label={`${m.title} — ${m.date}`}
-    >
-      {/* halou exterior */}
-      <span
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-40 blur-md"
-        style={{ width: size * 2.6, height: size * 2.6, background: "radial-gradient(circle, var(--gold), transparent 70%)" }}
-      />
-      {/* steaua */}
-      <span
-        className="relative block rounded-full bg-[var(--gold)]"
-        style={{
-          width: size,
-          height: size,
-          animation: "pulse-glow 3.5s ease-in-out infinite",
-          animationDelay: `${index * 0.4}s`,
-        }}
-      />
-      <span className="pointer-events-none absolute left-1/2 top-full mt-2 -translate-x-1/2 whitespace-nowrap font-hand text-base text-[var(--star)] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-        {m.title}
-      </span>
-    </motion.button>
+    // strat 1: poziția (centrată, static — nu animăm aici)
+    <div className="absolute -translate-x-1/2 -translate-y-1/2" style={{ left: `${m.x}%`, top: `${m.y}%` }}>
+      {/* strat 2: plutirea (doar translateY) */}
+      <div className="memory-star" style={{ animationDelay: `${index * 0.5}s` }}>
+        {/* strat 3: butonul (Framer se ocupă de intrare + hover, din centru) */}
+        <motion.button
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.15 + index * 0.12, duration: 0.7, type: "spring" }}
+          whileHover={{ scale: 1.45 }}
+          onClick={() => onSelect(index)}
+          className="group relative block"
+          style={{ width: size, height: size }}
+          aria-label={`${m.title} — ${m.date}`}
+        >
+          {/* halou exterior */}
+          <span
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-40 blur-md"
+            style={{ width: size * 2.6, height: size * 2.6, background: "radial-gradient(circle, var(--gold), transparent 70%)" }}
+          />
+          {/* steaua */}
+          <span
+            className="relative block h-full w-full rounded-full bg-[var(--gold)]"
+            style={{ animation: "pulse-glow 3.5s ease-in-out infinite", animationDelay: `${index * 0.4}s` }}
+          />
+          <span className="pointer-events-none absolute left-1/2 top-full mt-2 -translate-x-1/2 whitespace-nowrap font-hand text-base text-[var(--star)] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            {m.title}
+          </span>
+        </motion.button>
+      </div>
+    </div>
   );
 }
