@@ -7,7 +7,6 @@ import Intro from "./Intro";
 import Constellation from "./Constellation";
 import MemoryModal from "./MemoryModal";
 import Quotes from "./Quotes";
-import Timeline from "./Timeline";
 import Stats from "./Stats";
 import Jokes from "./Jokes";
 import FriendshipCounter from "./FriendshipCounter";
@@ -67,8 +66,6 @@ export default function Experience() {
               <Quotes />
               <Divider />
               <FriendshipCounter />
-              <Divider />
-              <Timeline onSelect={select} />
               <Divider />
               <Stats />
               <Divider />

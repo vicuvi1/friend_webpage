@@ -6,7 +6,6 @@ import { setMuted, getMutedInitial } from "@/lib/sound";
 
 const LINKS = [
   { id: "constelatie", label: "Stele" },
-  { id: "cronologie", label: "Poveste" },
   { id: "glume", label: "Glume" },
   { id: "scrisori", label: "Scrisori" },
   { id: "oaspeti", label: "Oaspeți" },
